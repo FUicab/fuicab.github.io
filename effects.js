@@ -5,9 +5,7 @@ $( document ).ready(function(){
         var $this = $(this);
         typingMemory = $this.html();
         $this.html('');
-        // console.log(typingMemory);
         typingList = typingMemory.trim().split(/(<.*?>)|((?![\n\t])[\w\S ])/g).filter( i => (i && i!=='\n') );
-        console.log(typingList);
         var htmlSubTag = "";
         typingList.forEach((char, i) => {
             var typingTime = (i+1)*50;
@@ -19,8 +17,6 @@ $( document ).ready(function(){
                     htmlSubTag = char.replace(/(<)|(>)/g,'');
                 }
             }
-            htmlSubTag && console.log(htmlSubTag);
-            console.log(typingTime+': '+char);
             if(htmlSubTag && !/^(<.*?>)$/.exec(char)){
                 char = `<${htmlSubTag}>${char}</${htmlSubTag}>`;
             }

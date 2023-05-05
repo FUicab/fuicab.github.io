@@ -263,6 +263,28 @@ table.double-col-table tr td:first-child{
     100% {opacity: 0;}
 }
 
+.portfolio-item{
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+}
+.portfolio-item .left-col{
+    flex: 0 0 270px;
+}
+.portfolio-item .left-col img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.portfolio-item .right-col{
+    padding: 16px 32px;
+    flex: 1 1 auto;
+}
+.portfolio-item .right-col h2{
+    margin: 0 0 16px;
+}
+
 footer{
     width: 1000px;
     max-width: 99vw;
