@@ -1,0 +1,10 @@
+{
+    "items": [
+        {
+            "title": "Sample 1",
+            "description": "This is a description",
+            "image": "img/shark.jpg",
+            "url": "#"
+        }
+    ]
+}
