@@ -24,6 +24,6 @@ $( document ).ready(function(){
             console.log(item);
 
         });
+        $('#portfolio-gallery').html(template);
     });
-    $('#portfolio-gallery').html(template);
 });
