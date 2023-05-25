@@ -1,24 +1,28 @@
 $( document ).ready(function(){
-    var template = `<div class="portfolio-item">
-        <div class="left-col">
-            <img src="img/shark.jpg" alt="">
-        </div>
-        <div class="right-col">
-            <h2>Portfolio sampleee</h2>
-            <p class="description">Portfolio items would look like this but with actual meaningful information.<br>
-                If I had words to make a day for you.
-                I'll sing you all morning, golden and new. I would make this day last for all time, and give you a night deep in moonshine.
-            </p>
-            <div class="skillset">
-                <span class="chip">HTML</span>
-                <span class="chip">CSS</span>
-                <span class="chip">Javascript</span>
-            </div>
-        </div>
-    </div>`;
+    var template = "";
     $.getJSON("portfolio-items.json", function( data ) {
         $.each( data, function( key, item ) {
+            
+            let skillset = "";
+            item.skillset.forEach((skill) => {
+                let skillType = skill.type===1 ? "second" : skill.type===2 ? "third" : "";
+                skillset += `<span class="chip ${skillType}">${skill.name}</span>`;
+            });
+
+            template += `<div class="portfolio-item">
+                <div class="left-col">
+                    <img src="img/shark.jpg" alt="">
+                </div>
+                <div class="right-col">
+                    <h2>${item.title}</h2>
+                    <p class="description">${item.description}</p>
+                    <div class="skillset">
+                        ${skillset}
+                    </div>
+                </div>
+            </div>`;
             console.log(item);
+
         });
     });
     $('#portfolio-gallery').html(template);

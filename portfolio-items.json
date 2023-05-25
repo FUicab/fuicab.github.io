@@ -1,10 +1,38 @@
-{
-    "items": [
-        {
-            "title": "Sample 1",
-            "description": "This is a description",
-            "image": "img/shark.jpg",
-            "url": "#"
-        }
-    ]
-}
+[
+    {
+        "title": "Sample 1",
+        "description": "This is a description",
+        "image": "img/shark.jpg",
+        "url": "#",
+        "skillset": [
+            {"name":"CSS", "type": 0},
+            {"name":"HTML", "type": 0},
+            {"name":"Javascript", "type": 0},
+            {"name":"Angular", "type": 1}
+        ]
+    },
+    {
+        "title": "Sample 2",
+        "description": "This is another description",
+        "image": "img/shark.jpg",
+        "url": "#",
+        "skillset": [
+            {"name":"CSS", "type": 0},
+            {"name":"HTML", "type": 0},
+            {"name":"Javascript", "type": 0},
+            {"name":"Angular", "type": 1}
+        ]
+    },
+    {
+        "title": "Sample 3",
+        "description": "More description",
+        "image": "img/shark.jpg",
+        "url": "#",
+        "skillset": [
+            {"name":"CSS", "type": 0},
+            {"name":"HTML", "type": 0},
+            {"name":"Javascript", "type": 0},
+            {"name":"Angular", "type": 1}
+        ]
+    }
+]
