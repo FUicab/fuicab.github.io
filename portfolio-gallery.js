@@ -1,29 +1,102 @@
+var json = `[
+    {
+        "title": "DaCodes web",
+        "description": "<p>This is the project that got me introduced into the professional world of <b>web development</b>.</p><p> I was hired by <b>DaCodes</b> as a Wordpress developer and my very first task was to make their site more optimal and better fitting for their growing company.<br>We optimized the website's loading time and the SEO. We added new features which included blog posts with customized features, a newsletter and sharing capabilities (pretty much inspired by the Medium website). We also added pages for Jobs, Podcast and Videos.</p><p> Today, the website looks very different from what we had when I was working on it. However, it is possible to look into the previous iterations of the website using the Way Back Machine.</p>",
+        "timespan": "2018 - 2019",
+        "thumbnail": "img/dacodes_wp_2.png",
+        "image": "img/shark.jpg",
+        "url": "dacodes.com.mx",
+        "skillset": [
+            {"name":"HTML", "type": 0},
+            {"name":"CSS", "type": 0},
+            {"name":"Javascript", "type": 0},
+            {"name":"PHP", "type": 0},
+            {"name":"Wordpress", "type": 1},
+            {"name":"jQuery", "type": 1},
+            {"name":"WPBakery", "type": 1},
+            {"name":"Guttenberg", "type": 1},
+            {"name":"Responsive design", "type": 2},
+            {"name":"SEO", "type": 2},
+            {"name":"WP Theme customization", "type": 2}
+        ]
+    },
+    {
+        "title": "Sample 2",
+        "description": "This is another description",
+        "image": "img/shark.jpg",
+        "url": "#",
+        "skillset": [
+            {"name":"CSS", "type": 0},
+            {"name":"HTML", "type": 0},
+            {"name":"Javascript", "type": 0},
+            {"name":"Angular", "type": 1}
+        ]
+    },
+    {
+        "title": "Sample 3",
+        "description": "More description",
+        "image": "img/shark.jpg",
+        "url": "#",
+        "skillset": [
+            {"name":"CSS", "type": 0},
+            {"name":"HTML", "type": 0},
+            {"name":"Javascript", "type": 0},
+            {"name":"Angular", "type": 1}
+        ]
+    }
+]`;
+
 $( document ).ready(function(){
     var template = "";
     $.getJSON("portfolio-items.json", function( data ) {
-        $.each( data, function( key, item ) {
+        // $.each( data, function( key, item ) {
             
-            let skillset = "";
-            item.skillset.forEach((skill) => {
-                let skillType = skill.type===1 ? "second" : skill.type===2 ? "third" : "";
-                skillset += `<span class="chip ${skillType}">${skill.name}</span>`;
-            });
+        //     let skillset = "";
+        //     item.skillset.forEach((skill) => {
+        //         let skillType = skill.type===1 ? "second" : skill.type===2 ? "third" : "";
+        //         skillset += `<span class="chip ${skillType}">${skill.name}</span>`;
+        //     });
 
-            template += `<div class="portfolio-item">
-                <div class="left-col">
-                    <img src="img/shark.jpg" alt="">
-                </div>
-                <div class="right-col">
-                    <h2>${item.title}</h2>
-                    <p class="description">${item.description}</p>
-                    <div class="skillset">
-                        ${skillset}
-                    </div>
-                </div>
-            </div>`;
-            console.log(item);
+        //     template += `<div class="portfolio-item">
+        //         <div class="left-col">
+        //             <img src="img/shark.jpg" alt="">
+        //         </div>
+        //         <div class="right-col">
+        //             <h2>${item.title}</h2>
+        //             <p class="description">${item.description}</p>
+        //             <div class="skillset">
+        //                 ${skillset}
+        //             </div>
+        //         </div>
+        //     </div>`;
+        //     console.log(item);
 
-        });
-        $('#portfolio-gallery').html(template);
+        // });
+        // $('#portfolio-gallery').html(template);
     });
+    $.each( JSON.parse(json), function( key, item ) {
+            
+        let skillset = "";
+        item.skillset.forEach((skill) => {
+            let skillType = skill.type===1 ? "second" : skill.type===2 ? "third" : "";
+            skillset += `<span class="chip ${skillType}">${skill.name}</span>`;
+        });
+
+        template += `<div class="portfolio-item">
+            <div class="thumbnail">
+                <img src="${item.thumbnail || item.image}" alt="">
+            </div>
+            <div class="main-content">
+                <h2>${item.title}</h2>
+                ${item.timespan? `<div class="timespan">${item.timespan}</div>`:""}
+                <div class="description">${item.description}</div>
+                <div class="skillset">
+                    ${skillset}
+                </div>
+            </div>
+        </div>`;
+        console.log(item);
+
+    });
+    $('#portfolio-gallery').html(template);
 });
