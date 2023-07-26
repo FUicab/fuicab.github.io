@@ -10,6 +10,7 @@ import { CodeSamplesComponent } from './views/code-samples/code-samples.componen
 import { NavbarComponent } from './blocks/navbar/navbar.component';
 import { FooterComponent } from './blocks/footer/footer.component';
 import { NavbarLinkComponent } from './blocks/navbar-link/navbar-link.component';
+import { TyperComponent } from './code-samples/typer/typer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavbarLinkComponent } from './blocks/navbar-link/navbar-link.component'
     CodeSamplesComponent,
     NavbarComponent,
     FooterComponent,
-    NavbarLinkComponent
+    NavbarLinkComponent,
+    TyperComponent
   ],
   imports: [
     BrowserModule,
