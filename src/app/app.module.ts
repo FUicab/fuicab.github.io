@@ -5,12 +5,22 @@ import { RoutingModule } from './routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
+import { ExperienceComponent } from './views/experience/experience.component';
+import { CodeSamplesComponent } from './views/code-samples/code-samples.component';
+import { NavbarComponent } from './blocks/navbar/navbar.component';
+import { FooterComponent } from './blocks/footer/footer.component';
+import { NavbarLinkComponent } from './blocks/navbar-link/navbar-link.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ExperienceComponent,
+    CodeSamplesComponent,
+    NavbarComponent,
+    FooterComponent,
+    NavbarLinkComponent
   ],
   imports: [
     BrowserModule,
