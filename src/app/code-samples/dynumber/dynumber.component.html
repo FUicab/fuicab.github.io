@@ -1,0 +1,17 @@
+<div *ngIf="type=='simple'" class="value-box {{type}}" [style.width]="mainElement.clientWidth+'px'">
+	<span class="simple current" #mainElement [class.up]="animate&&isHigher" [class.down]="animate&&!isHigher">{{value}}</span>
+	<span class="simple prev" [class.up]="animate&&isHigher" [class.down]="animate&&!isHigher">{{prevValue}}</span>
+</div>
+<div *ngIf="type=='linear'" class="value-box {{type}}">
+	<span class="linear current" #mainElement>{{value}}</span>
+</div>
+<div *ngIf="type=='individual'" class="value-box {{type}}" [style.width]="iterable(value).length*0.6+'em'">
+	<span class="single-number current" [class.up]="animate&&isHigher&&changedDigits[i]" [class.down]="animate&&!isHigher&&changedDigits[i]" [style.left]="i*0.5+'em'" *ngFor="let x of iterable(value); let i = index" [style.animation-duration]="((duration/1000)/diff[i].length*(diff[i].length-1))+'s'">{{x}}</span>
+	<span class="single-number prev" [class.up]="animate&&isHigher&&changedDigits[i]" [class.down]="animate&&!isHigher&&changedDigits[i]" [style.left]="i*0.5+'em'" *ngFor="let x of iterable(prevValue); let i = index" [style.animation-duration]="((duration/1000)/diff[i].length*(diff[i].length-1))+'s'">{{x}}</span>
+	<div class="scrollers" [style.left]="i*0.5+'em'" *ngFor="let d of diff; let i = index">
+		<span *ngFor="let x of d; let in = index" [style.animation]="'scrollUp ease forwards '+((duration/1000)/d.length*(in+1))+'s '+((duration/1000)/d.length*(in))+'s'">
+		<!-- <span *ngFor="let x of d; let in = index" [style.animation]="'scrollUp linear forwards '+((duration/1000)/d.length*(in+1))+'s '+((duration/1000)/d.length*(in))+'s'" [style.opacity]="(1/d.length)/2"> -->
+			{{x}}
+		</span>
+	</div>
+</div>

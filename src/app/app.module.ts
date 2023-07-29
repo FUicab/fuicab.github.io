@@ -11,6 +11,7 @@ import { NavbarComponent } from './blocks/navbar/navbar.component';
 import { FooterComponent } from './blocks/footer/footer.component';
 import { NavbarLinkComponent } from './blocks/navbar-link/navbar-link.component';
 import { TyperComponent } from './code-samples/typer/typer.component';
+import { DynumberComponent } from './code-samples/dynumber/dynumber.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TyperComponent } from './code-samples/typer/typer.component';
     NavbarComponent,
     FooterComponent,
     NavbarLinkComponent,
-    TyperComponent
+    TyperComponent,
+    DynumberComponent
   ],
   imports: [
     BrowserModule,

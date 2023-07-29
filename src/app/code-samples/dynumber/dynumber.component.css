@@ -1,0 +1,107 @@
+/* ------------------------------------------------------------------- GENERAL */
+.value-box{
+	position: relative;
+	display: inline-block;
+	height: 1.5rem;
+	vertical-align: text-bottom;
+	overflow: hidden;
+	transition: 0.2s ease;
+	/*width: 100px;*/
+}
+
+/* ------------------------------------------------------------------- SIMPLE */
+.value-box .simple.current, .value-box .simple.prev{
+	/*opacity: 0;*/
+	position: absolute;
+	left: 0;
+	top: 0rem;
+}
+.value-box .simple.current{
+	opacity: 0;
+}
+.value-box .simple.prev{
+}
+@keyframes currentUp {
+	0% {opacity: 1; transform: translateY(1em);}
+  	100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes prevUp {
+	0% {opacity: 1; transform: translateY(0);}
+	100% {opacity: 1; transform: translateY(-1em); visibility: hidden;}
+}
+.value-box .simple.current.up{
+	animation: currentUp 0.2s ease forwards;
+}
+.value-box .simple.prev.up{
+	animation: prevUp 0.2s ease forwards;
+}
+@keyframes currentDown {
+	0% {opacity: 1; transform: translateY(-1em);}
+  	100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes prevDown {
+	0% {opacity: 1; transform: translateY(0);}
+	100% {opacity: 1; transform: translateY(1em); visibility: hidden;}
+}
+.value-box .simple.current.down{
+	animation: currentDown 0.2s ease forwards;
+}
+.value-box .simple.prev.down{
+	animation: prevDown 0.2s ease forwards;
+}
+
+/* ------------------------------------------------------------------- INDIVIDUAL */
+.value-box .single-number{
+	position: absolute;
+	left: 0;
+}
+.value-box .scrollers{
+	position: absolute;
+}
+.value-box .scrollers span{
+	position: absolute;
+	/*opacity: 0.25;*/
+	top: 0;
+}
+.value-box .single-number.current{
+	opacity: 0;
+}
+.value-box .single-number.prev{
+}
+.value-box .single-number.current.up{
+	animation: currentScrollUp 0.1s 0.4s linear forwards;
+}
+.value-box .single-number.prev.up{
+	animation: prevScrollUp 0.1s linear forwards;
+}
+.value-box .single-number.current.down{
+	animation: currentScrollDown 0.1s 0.4s linear forwards;
+}
+.value-box .single-number.prev.down{
+	animation: prevScrollDown 0.1s linear forwards;
+}
+
+@keyframes currentScrollUp {
+	0% {opacity: 1; transform: translateY(1em);}
+  	100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes prevScrollUp {
+	0% {opacity: 1; transform: translateY(0);}
+	100% {opacity: 1; transform: translateY(-1em); visibility: hidden;}
+}
+@keyframes scrollUp {
+	0% {opacity: 1; transform: translateY(1em);}
+	100% {opacity: 1; transform: translateY(-1em); visibility: hidden;}
+}
+@keyframes currentScrollDown {
+	0% {opacity: 1; transform: translateY(-1em);}
+  	100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes prevScrollDown {
+	0% {opacity: 1; transform: translateY(0);}
+	100% {opacity: 1; transform: translateY(1em); visibility: hidden;}
+}
+@keyframes scrollDown {
+	0% {opacity: 1; transform: translateY(-1em);}
+	100% {opacity: 1; transform: translateY(1em); visibility: hidden;}
+}
