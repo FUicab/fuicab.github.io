@@ -10,10 +10,10 @@ export class CodeSamplesComponent {
   constructor(){
     var dis = this;
     setInterval(function(){
-			dis.x = dis.rand(9);
+			dis.x = dis.rand(20);
 		}, 2000)
 		setInterval(function(){
-			dis.i += dis.rand(6);
+			dis.i += dis.rand(10);
 		}, 2000)
 		setInterval(function(){
 			dis.e += dis.rand(100);

@@ -35,13 +35,20 @@
     The difference between Optimized and Non-optimized is that the Optimized one only animates through a few numbers between the previous and the new value, while the Non-optimized one goes through all the numbers. If the difference between both of them is large you'll get a lag spike in the client's browser because of it. It is recommended to always go for the Optimized one. I bet you didn't notice the difference (visually) anyway.<br>
     It is also recommended to use monospace typographies for this one or you'll numbers will make your text shake.</p>
 
-	<!-- <h3>Individual</h3>
+	<h3>Individual</h3>
 	<p>$<dynumber
 		[value]="i"
 		type="individual"
-        [duration]="100"
+        [duration]="400"
 		></dynumber>
-	earned in the last hour.</p> -->
+	earned in the last hour.</p>
+	<p>The Individual one has proven to be quite a trouble but it makes a very unique animation. While developing it I've found a few challenges:</p>
+	<ul>
+		<li>Because numbers are animated in a cell-like way, it is necessary to use monospace typographies.</li>
+		<li>Every single number of difference requires its own element and its animation. Enabling optimization is absolutely necessary because numbers beyond 100 can make browsers freeze or lag (I've had to test it with 1'000'000 so you don't have to).</li>
+		<li>While it looks "good" it's still not what my perfeccionist side aims for.</li>
+	</ul>
+	<p>It still got its charm and I would use it to decorate a donation or "likes" counter.</p>
 </div>
 
 <i>Many code samples will go here...</i>

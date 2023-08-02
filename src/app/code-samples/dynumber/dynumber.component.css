@@ -60,13 +60,16 @@
 }
 .value-box .scrollers span{
 	position: absolute;
-	/*opacity: 0.25;*/
-	top: 0;
+	animation: scrollUp linear forwards;
+	text-align: center;
+	/* opacity: 0.25; */
+	/* top: 0; */
 }
 .value-box .single-number.current{
 	opacity: 0;
 }
 .value-box .single-number.prev{
+	/* opacity: 0; */
 }
 .value-box .single-number.current.up{
 	animation: currentScrollUp 0.1s 0.4s linear forwards;
@@ -90,8 +93,8 @@
 	100% {opacity: 1; transform: translateY(-1em); visibility: hidden;}
 }
 @keyframes scrollUp {
-	0% {opacity: 1; transform: translateY(1em);}
-	100% {opacity: 1; transform: translateY(-1em); visibility: hidden;}
+	0% { transform: translateY(1em); visibility: visible;}
+	100% { transform: translateY(-1em); visibility: hidden;}
 }
 @keyframes currentScrollDown {
 	0% {opacity: 1; transform: translateY(-1em);}
