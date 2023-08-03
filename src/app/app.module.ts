@@ -13,6 +13,7 @@ import { NavbarLinkComponent } from './blocks/navbar-link/navbar-link.component'
 import { TyperComponent } from './code-samples/typer/typer.component';
 import { DynumberComponent } from './code-samples/dynumber/dynumber.component';
 import { PortfolioItemComponent } from './blocks/portfolio-item/portfolio-item.component';
+import { SkillChipComponent } from './blocks/skill-chip/skill-chip.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PortfolioItemComponent } from './blocks/portfolio-item/portfolio-item.c
     NavbarLinkComponent,
     TyperComponent,
     DynumberComponent,
-    PortfolioItemComponent
+    PortfolioItemComponent,
+    SkillChipComponent
   ],
   imports: [
     BrowserModule,
