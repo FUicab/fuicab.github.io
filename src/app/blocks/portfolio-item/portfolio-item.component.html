@@ -6,10 +6,10 @@
         <h2>{{title}}</h2>
         <p class="description" [innerHTML]="description"></p>
         <div class="skillset">
-            <skill-chip name="HTML" />
-            <skill-chip name="CSS" />
-            <skill-chip name="Javascript" />
-            <skill-chip name="Angular" />
+            <skill-chip
+                *ngFor="let skill of skillset"
+                name="{{skill}}"
+            />
         </div>
     </div>
 </div>

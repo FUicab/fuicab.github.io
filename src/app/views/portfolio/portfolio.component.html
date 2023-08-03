@@ -2,8 +2,10 @@
 <hr>
 <div class="portfolio-wrapper" id="portfolio-gallery">
     <portfolio-item
-        title="Title"
-        description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus sunt facilis quaerat quasi eaque repellat consequatur fugiat sit incidunt nihil rem optio aperiam, officia voluptate accusamus velit laudantium magni praesentium!"
-        img="assets/img/shark.jpg"
+        *ngFor="let item of portfolioData.default"
+        title="{{item.title}}"
+        description="{{item.description}}"
+        img="{{'assets/'+item.thumbnail}}"
+        [skillset]="item.skillset"
     />
 </div>

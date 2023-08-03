@@ -9,8 +9,8 @@ export class SkillChipComponent {
   @Input() name:string = '';
 
   list1:string[] = ['HTML','Javascript','CSS','SASS','LESS','JSON','Git','PHP','Typescript','MySQL','Firebase','C#','Python','.NET','Java']; //Coding languages, databases and core technologies
-  list2:string[] = ['Angular','React','Wordpress','Shopify','jQuery','Bootstrap','Material Design','Webflow','Shopify','React Native']; //Libraries, software and other environments
-  list3:string[] = ['UI/UX','Responsive Design','Multi-language','Mobile Apps','SEO','Frontend','Backend','Fullstack','Artificial Intelligences']; //Soft skills and other technical skills
+  list2:string[] = ['Angular','React','Wordpress','Shopify','jQuery','Bootstrap','Material Design','Webflow','Shopify','React Native', 'WPBakery', 'Guttenberg']; //Libraries, software and other environments
+  list3:string[] = ['UI/UX','Responsive Design','Multi-language','Mobile Apps','SEO','Frontend','Backend','Fullstack','Artificial Intelligences', 'WP THeme customization']; //Soft skills and other technical skills
   
   getHierarchy(name:string = ''):string{
     if(this.list1.includes(name)){

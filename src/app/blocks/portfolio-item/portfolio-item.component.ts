@@ -9,4 +9,5 @@ export class PortfolioItemComponent {
   @Input() title:string = '';
   @Input() description:string = '';
   @Input() img:string = 'assets/img/shark.jpg';
+  @Input() skillset:string[] = [];
 }
