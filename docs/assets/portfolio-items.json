@@ -1,27 +1,51 @@
 [
     {
-        "title": "DaCodes web",
-        "description": "<p>This is the project that got me introduced into the professional world of <b>web development</b>.</p><p> I was hired by <b>DaCodes</b> as a Wordpress developer and my very first task was to make their site more optimal and better fitting for their growing company.<br>We optimized the website's loading time and the SEO. We added new features which included blog posts with customized features, a newsletter and sharing capabilities (pretty much inspired by the Medium website). We also added pages for Jobs, Podcast and Videos.</p><p> Today, the website looks very different from what we had when I was working on it. However, it is possible to look into the previous iterations of the website using the Way Back Machine.</p>",
-        "timespan": "2018 - 2019",
-        "thumbnail": "img/dacodes_wp_2.png",
+        "title": "Kinich",
+        "description": "<p><b>Kinich</b> is a local restaurant located in Izamal and serves popular and authentic Yucatecan food. It's an obligatory place to go when you're willing to come and live the most pure of Mayan's experiences.</p><p>For this project we were handled a design provided by a designer and were instructed to work on it. However, during development, a few elements were changed on the client's feedback.</p><p>The site uses a fair amount of plugins to handle its forms, pages and catalogs. Nothing different from what we were used to work with at the time.</p>",
+        "timespan": "2019",
+        "thumbnail": "img/kinich.png",
         "image": "img/shark.jpg",
-        "url": "dacodes.com.mx",
-        "skillset": [ "HTML", "CSS", "Javascript", "PHP", "Wordpress", "jQuery", "WPBakery", "Guttenberg", "Responsive Design", "SEO", "WP THeme customization", "UI/UX" ]
-    },
-    {
-        "title": "Site de Journalisation",
-        "description": "<p>This project was developed in 2017 during my internship at the <b>Midi-Pyrenées Observatory</b>.</p> <p>It required me to work on a new Wordpress theme using PHP, HTML, CSS and a bit of Javascript to handle a few extra functionalities. It also required the use of custom fields and scripting special queries to get specific logs. One of the most difficult features (at the time) was the making of a simplified form to submit logs quickly without the need to access the Wordpress panel.</p> <p>The observatory workers were continuously asking about their desired features and bringing up their issues with the tool they had, then it was my job to proppose and develop the solutions. </p>",
-        "image": "img/shark.jpg",
-        "thumbnail": "img/site-journalisation.png",
         "url": "#",
-        "skillset": ["HTML","Javascript","CSS","jQuery","Wordpress","WP THeme customization"]
-    },
-    {
+        "skillset": ["HTML","Javascript","CSS","PHP","jQuery","Wordpress","WPBakery","UI/UX","SEO","WP THeme customization"]
+    },{
+        "title": "Brain3",
+        "description": "<p><b>Brain3</b> needed a website featuring all the good things that they've got to offer. They wanted to have a space in the web and we delivered.</p><p>The site featured a video background at the top of the page which would welcome the visitors. An \"About us\" and a \"Contact\" page were present as well.</p><p>While most of the site was built on the usual WPBakery, some CSS tweaks were also necessary.</p>",
+        "timespan": "2019",
+        "thumbnail": "img/brain3.png",
+        "image": "img/shark.jpg",
+        "url": "#",
+        "skillset": ["HTML","CSS","Wordpress","WPBakery","UI/UX","SEO"]
+    },{
+        "title": "ARC·MX",
+        "description": "<p><b>ARC·MX</b> is an architecture business and needed a space to show up their projects and to stay in contact with potential clients. It features an \"About us\", a \"Portfolio\" and a \"Contact\" page.</p><p>While most of the site was built on the usual WPBakery, some CSS tweaks were also necessary.</p>",
+        "timespan": "2018",
+        "thumbnail": "img/arcmx.png",
+        "image": "img/shark.jpg",
+        "url": "#",
+        "skillset": ["HTML","CSS","Wordpress","WPBakery","UI/UX","SEO"]
+    },{
         "title": "Kolem Jaá",
         "description": "<p>The representant of <b>Kolem Jaá</b> came to us without much of a solid concept of what they wanted. We were told to be creative and <i>“make the new website give the same feeling as the first one while having a more modern look”</i>.</p> <p>For this project I was allowed to make proposals to the client while the designers guided me to make my ideas more user friendly.</p> <p>I used a lot of CSS for the effects and colors, while HTML, PHP and Javascript were reserved only for additional effects. Most of the elements on each page were created used the WPBakery plugin for Wordpress.<p> </p>This was more of a design revamp than a functional one and I was happy to work with that much creative freedom and know that the client was very happy with what we had accomplished.</p>",
+        "timespan": "2018",
         "thumbnail": "img/kolemjaa.png",
         "image": "img/shark.jpg",
         "url": "#",
         "skillset": ["HTML","Javascript","CSS","jQuery","Wordpress","WPBakery","UI/UX","SEO"]
+    },{
+        "title": "DaCodes web",
+        "description": "<p>This is the project that got me introduced into the professional world of <b>web development</b>.</p><p> I was hired by <b>DaCodes</b> as a Wordpress developer and my very first task was to make their site more optimal and better fitting for their growing company.<br>We optimized the website's loading time and the SEO. We added new features which included blog posts with customized features, a newsletter and sharing capabilities (pretty much inspired by the Medium website). We also added pages for Jobs, Podcast and Videos.</p><p> Today, the website looks very different from what we had when I was working on it. However, it is possible to look into the previous iterations of the website using the Way Back Machine.</p>",
+        "timespan": "2017 - 2019",
+        "thumbnail": "img/dacodes_wp_2.png",
+        "image": "img/shark.jpg",
+        "url": "dacodes.com.mx",
+        "skillset": [ "HTML", "CSS", "Javascript", "PHP", "Wordpress", "jQuery", "WPBakery", "Guttenberg", "Responsive Design", "SEO", "WP THeme customization", "UI/UX" ]
+    },{
+        "title": "Site de Journalisation",
+        "description": "<p>This project was developed in 2017 during my internship at the <b>Midi-Pyrenées Observatory</b>.</p> <p>It required me to work on a new Wordpress theme using PHP, HTML, CSS and a bit of Javascript to handle a few extra functionalities. It also required the use of custom fields and scripting special queries to get specific logs. One of the most difficult features (at the time) was the making of a simplified form to submit logs quickly without the need to access the Wordpress panel.</p> <p>The observatory workers were continuously asking about their desired features and bringing up their issues with the tool they had, then it was my job to proppose and develop the solutions. </p>",
+        "image": "img/shark.jpg",
+        "timespan": "2017",
+        "thumbnail": "img/site-journalisation.png",
+        "url": "#",
+        "skillset": ["HTML","Javascript","CSS","jQuery","Wordpress","WP THeme customization"]
     }
 ]
