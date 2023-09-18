@@ -14,6 +14,13 @@ import { TyperComponent } from './code-samples/typer/typer.component';
 import { DynumberComponent } from './code-samples/dynumber/dynumber.component';
 import { PortfolioItemComponent } from './blocks/portfolio-item/portfolio-item.component';
 import { SkillChipComponent } from './blocks/skill-chip/skill-chip.component';
+import { CodeTabsComponent } from './blocks/code-tabs/code-tabs.component';
+import { PrismCodeComponent } from './blocks/prism-code/prism-code.component';
+
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-css';
+// Add more prism language if need!
 
 @NgModule({
   declarations: [
@@ -28,7 +35,9 @@ import { SkillChipComponent } from './blocks/skill-chip/skill-chip.component';
     TyperComponent,
     DynumberComponent,
     PortfolioItemComponent,
-    SkillChipComponent
+    SkillChipComponent,
+    CodeTabsComponent,
+    PrismCodeComponent
   ],
   imports: [
     BrowserModule,

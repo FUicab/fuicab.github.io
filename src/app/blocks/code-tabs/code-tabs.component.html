@@ -1,0 +1,20 @@
+<div class="code-sample-tab">
+    <div class="tabs">
+        <a class="tab-button {{tab.key}}" *ngFor="let tab of tabs; let i = index" [class.active]="currentTab == i" (click)="setTab(i)" [style.zIndex]="tabs.length - i">
+            {{tab.title}}
+        </a>
+    </div>
+    <div class="content content-of-{{tabs[currentTab].key}}">
+        <div class="description-wrapper" *ngIf="tabs[currentTab].key === 'description'">
+            <ng-content/>
+        </div>
+        <div class="source-wrapper" *ngIf="tabs[currentTab].key === 'source'">
+            <prism-code [code]="sourceCode" language="typescript" ></prism-code>
+        </div>
+        <div class="try-it-wrapper" *ngIf="tabs[currentTab].key === 'try-it'">
+            <div>
+                <p><i>Coming soon...</i></p>
+            </div>
+        </div>
+    </div>
+</div>
