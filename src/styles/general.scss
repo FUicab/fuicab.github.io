@@ -1,0 +1,137 @@
+@font-face { font-family: "Kanit Light"; src: url(../assets/fonts/Kanit-Light.ttf); }
+@font-face { font-family: "Kanit"; src: url(../assets/fonts/Kanit-Regular.ttf); }
+@font-face { font-family: "Kanit Bold"; src: url(../assets/fonts/Kanit-SemiBold.ttf); }
+@font-face { font-family: "VT323"; src: url(../assets/fonts/VT323-Regular.ttf); }
+
+:root {
+	--main-bg: #eff9ff;
+	--text-color: #31344b;
+	--title-color: #12326d;
+	--subtitle-color: #446299;
+	--lighdark: #536c9b;
+	--highlight-color: #3366aa;
+	--border: 1px solid #9ccbf342;
+	--subtle-bg: rgba(255,255,255,0.5);
+	--subtle-border: #daeafe;
+	--blur: blur(24px);
+	--sans: "Kanit Light", system-ui, 'Segoe UI', Roboto, sans-serif;
+	--heading: "Kanit", system-ui, 'Segoe UI', Roboto, sans-serif;
+	--mono: "VT323", ui-monospace, Consolas, monospace;
+	font: 18px var(--sans);
+}
+
+html {
+	//background: radial-gradient(#0344, transparent) no-repeat bottom center;
+	//background-color: var(--main-bg);
+	//background-size: 200vw 200vh;
+	//background-repeat: no-repeat;
+}
+
+body{
+	margin: 0;
+	background:
+		linear-gradient(to top, #fff8, #fffa),
+		radial-gradient(#758dc1  0%, transparent 50%) 0vw 0vh no-repeat,
+		radial-gradient(#8dbdff, transparent 50%) -110vw -90vh,
+		radial-gradient(#99ffc5dd 0%, transparent 50%) -14vw -87vh,
+		radial-gradient(#b6fcffcc, transparent 50%) -58vw -5vh,
+		linear-gradient(to top, #2ba7ff 50%, #baccff 100%);
+	background-attachment: fixed;
+}
+
+#root > div {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	main {
+		flex: 1 0 auto;
+		max-width: 1200px;
+		width: 100%;
+		margin-left: 6vw;
+		margin-right: auto;
+		background-color: var(--subtle-bg);
+		border: var(--border);
+	}
+}
+
+h1{
+    font-size: 64px;
+    font-family: 'Kanit Bold';
+	color: var(--title-color);
+	margin-bottom: 0;
+	line-height: 1.15;
+}
+
+h2{
+    font-size: 28px;
+    font-family: 'Kanit Bold';
+    color: var(--title-color);
+}
+h2.fancy{
+    color: var(--main-bg);
+    background-color: var(--lighdark);
+    display: inline-block;
+    border-radius: 8px;
+    padding: 2px 16px;
+}
+
+h3{
+    font-size: 24px;
+    font-family: 'Kanit Bold';
+    color: var(--highlight-color);
+}
+
+h1 strong{
+    color: var(--highlight-color);
+}
+
+h4{
+    font-size: 20px;
+    font-family: 'Kanit Bold';
+    margin: 0 0 8px;
+}
+
+hr{
+    border-style: none;
+    height: 2px;
+	margin: 4px -18px;
+	background: linear-gradient(to right, var(--subtle-border), #cadaee, var(--subtle-border));
+    // background: linear-gradient(to right, rgba(0,0,0,0), var(--title-color), rgba(0,0,0,0) );
+}
+
+p{
+    font-size: 18px;
+    font-family: 'Kanit Light';
+    line-height: 1.25;
+    text-align: justify;
+}
+
+a{
+    opacity: 0.9;
+    text-decoration: none;
+    transition: 0.1s ease;
+}
+
+table.double-col-table{
+    border-collapse: collapse;
+    font-size: 18px;
+	tr:not(:last-child){
+		border-bottom: var(--border);
+	}
+	
+	tr td{
+		padding: 8px;
+	}
+	
+	tr td:first-child{
+		text-align: right;
+		font-weight: bold;
+	}
+}
+
+ul{
+	margin: 0;
+	padding-left: 12px;
+	list-style: '• ';
+}

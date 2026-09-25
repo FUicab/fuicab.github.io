@@ -1,0 +1,17 @@
+span.chip{
+    display: inline-block;
+    color: var(--main-bg);
+    background-color: var(--highlight-color);
+    padding: 2px 8px;
+    margin-right: 2px;
+    margin-bottom: 6px;
+    border-radius: 4px;
+}
+
+span.chip.second{
+    background-color: #339944;
+}
+
+span.chip.third{
+    background-color: #aa6633;
+}
