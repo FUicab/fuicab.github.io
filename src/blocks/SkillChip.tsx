@@ -1,8 +1,8 @@
 import { Component, ReactElement, ReactHTMLElement } from "react";
 
 const list1:string[] = ['HTML','Javascript','CSS','SASS','LESS','JSON','Git','PHP','Typescript','MySQL','Firebase','C#','Python','.NET','Java']; //Coding languages, databases and core technologies
-const list2:string[] = ['Angular','React','Wordpress','Shopify','jQuery','Bootstrap','Material Design','Webflow','Shopify','React Native', 'WPBakery', 'Guttenberg', 'Unity']; //Libraries, software and other environments
-const list3:string[] = ['UI/UX','Responsive Design','Multi-language','Mobile Apps','SEO','Frontend','Backend','Fullstack','Artificial Intelligences', 'WP THeme customization']; //Soft skills and other technical skills
+const list2:string[] = ['Angular','React','Wordpress','Shopify','jQuery','Bootstrap','Material Design','Webflow','Shopify','React Native', 'WPBakery', 'Guttenberg', 'Unity', 'REST API', 'Node', 'Vite', 'React Router']; //Libraries, software and other environments
+const list3:string[] = ['UI/UX','Responsive Design','Multi-language','Mobile Apps','SEO','Frontend','Backend','Fullstack','Artificial Intelligences', 'WP THeme customization', 'Accessibility','Multi-platform compatibility', 'Prompt Engineering', 'Game System Design']; //Soft skills and other technical skills
 
 function getHierarchy(name:string = ''):string{
     if(list1.includes(name)){

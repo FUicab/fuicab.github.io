@@ -1,31 +1,63 @@
 .cover-description{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+
     h1{
-        line-height: 1.15;
+        line-height: 1;
         margin-bottom: 0px;
     }
     h2{
         margin: 0;
-        margin-bottom: 16px;
-        line-height: 1.15;
+        // margin-bottom: 16px;
+        line-height: 1;
         /* text-transform: uppercase; */
     }
     h4{
         margin-top: 8px;
         line-height: 1.15;
-        font-size: 18px;
+        font-size: 16px;
         color: var(--subtitle-color);
-        width: 280px;
+        // width: 280px;
     }
 }
 
 .about-me{
     display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    >div{
+        h2{
+            margin: 0 0 24px;
+            // width: 100%;
+        }
+        table{
+            width: 100%;
+        }
+    }
     
     .personal-info{
-        flex: 0 1 360px;
+        flex: 1 1 320px;
     }
     
     .skillset{
-        flex: 1 1 50%;
+        flex: 8 1 560px;
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 12px 12px;
+            gap: 12px;
+
+            .skill-container{
+                flex: 1 1 40%;
+                // padding: 12px;
+                // border-radius: var(--border-radius);
+                // border: var(--border);
+            }
+        }
     }
 }

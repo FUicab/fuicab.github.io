@@ -7,7 +7,7 @@ export default function App() {
         <div>
             <Nav />
 
-            <main style={{ padding: '1rem' }}>
+            <main>
                 {/* This is where Home or About will render */}
                 <Outlet />
             </main>
