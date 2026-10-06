@@ -1,8 +1,49 @@
+@use '_mixins' as mixin;
 @font-face { font-family: "Kanit Light"; src: url(../assets/fonts/Kanit-Light.ttf); }
 @font-face { font-family: "Kanit"; src: url(../assets/fonts/Kanit-Regular.ttf); }
 @font-face { font-family: "Kanit Bold"; src: url(../assets/fonts/Kanit-SemiBold.ttf); }
 @font-face { font-family: "VT323"; src: url(../assets/fonts/VT323-Regular.ttf); }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji:wght@300..700&family=Noto+Sans+Symbols+2&family=Noto+Sans+Symbols:wght@100..900&display=swap');
+
+$shade-10: rgb(32,64,128,0.1);
+$shade-40: rgb(32,64,128,0.4);
+$shade-80: rgb(32,64,128,0.8);
+$topBoxTransitionTime: 0.4s;
+$topBoxTransitionIn: opacity $topBoxTransitionTime ease, transform $topBoxTransitionTime ease, z-index 0s, visibility 0s;
+$topBoxTransitionOut: opacity $topBoxTransitionTime ease, transform $topBoxTransitionTime ease, z-index 0s $topBoxTransitionTime, visibility 0s $topBoxTransitionTime;
+$bodyBackground: linear-gradient(to top, #fff8, #fffa),
+		radial-gradient(#758dc1  0%, transparent 50%) 0vw 0vh no-repeat,
+		radial-gradient(#8dbdff, transparent 50%) -110vw -90vh,
+		radial-gradient(#99ffc5dd 0%, transparent 50%) -14vw -87vh,
+		radial-gradient(#b6fcffcc, transparent 50%) -58vw -5vh,
+		linear-gradient(to top, #2ba7ff 50%, #baccff 100%);
+$simplifiedBodyBackground: linear-gradient(to top, #fff8, #fffa),
+		radial-gradient(circle at 0% 33%, #b6fcffcc 0%, transparent 50%) -14vw -87vh,
+		linear-gradient(to top, #2ba7ff 50%, #baccff 100%);
+
+html{
+	overflow-y: scroll;
+	scrollbar-gutter: stable;
+
+	::-webkit-scrollbar{
+		background: $simplifiedBodyBackground;
+		width: 12px;
+		padding-right: 4px;
+	}
+
+	::-webkit-scrollbar-thumb{
+		@include mixin.box-style;
+		background-color: $shade-80;
+		width: 8px;
+		padding-right: 4px;
+		// margin-right: 4px;
+	}
+
+	// >*::-webkit-scrollbar{
+	// 	background: transparent;
+	// 	width: 12px;
+	// }
+}
 
 :root {
 	--main-bg: #eff9ff;
@@ -22,27 +63,37 @@
 	font: 18px var(--sans);
 }
 
+
 *{
 	box-sizing: border-box;
 }
 
-html {
-	//background: radial-gradient(#0344, transparent) no-repeat bottom center;
-	//background-color: var(--main-bg);
-	//background-size: 200vw 200vh;
-	//background-repeat: no-repeat;
-}
+// *::-webkit-scrollbar{
+// 	// background-color: transparent;
+// 	width: 8px;
+// 	margin-left: -8px;
+// }
+
+// *::-webkit-scrollbar-thumb{
+// 	@include mixin.box-style;
+// 	background-color: $shade-80;
+// 	width: 8px;
+// 	margin-right: 4px;
+// }
 
 body{
 	margin: 0;
-	background:
-		linear-gradient(to top, #fff8, #fffa),
-		radial-gradient(#758dc1  0%, transparent 50%) 0vw 0vh no-repeat,
-		radial-gradient(#8dbdff, transparent 50%) -110vw -90vh,
-		radial-gradient(#99ffc5dd 0%, transparent 50%) -14vw -87vh,
-		radial-gradient(#b6fcffcc, transparent 50%) -58vw -5vh,
-		linear-gradient(to top, #2ba7ff 50%, #baccff 100%);
+	background: $bodyBackground;
 	background-attachment: fixed;
+
+	*::-webkit-scrollbar{
+		background: transparent;
+	}
+	*::-webkit-scrollbar-thumb{
+		@include mixin.box-style;
+		background-color: $shade-40;
+		width: 8px;
+	}
 }
 
 #root > div {
@@ -67,6 +118,7 @@ h1{
 	color: var(--title-color);
 	margin-bottom: 0;
 	line-height: 1.15;
+	text-align: center;
 }
 
 h2{
@@ -164,3 +216,51 @@ ul{
 	border-radius: var(--border-radius);
 	box-shadow: 0 12px 24px rgba(32,64,128,0.05), 0 4px 8px rgba(32,64,128,0.1);
 }
+
+.box-content-overlay{
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to bottom, transparent, $shade-80);
+	visibility: hidden;
+	opacity: 0;
+	// display: none;
+	z-index: -1;
+	// transition: $topBoxTransitionOut;
+
+	&.animated{
+		animation: overlayOut $topBoxTransitionTime;
+	}
+
+	&.active{
+		// transition: $topBoxTransitionIn;
+		animation: overlayIn $topBoxTransitionTime;
+		visibility: visible;
+		opacity: 1;
+		z-index: 9;
+		// display: inherit;
+	}
+}
+
+@keyframes boxIn {
+	0% { opacity: 0; visibility: hidden; transform: scale(0.95) translateY(-12px); }	
+	100% { opacity: 1; visibility: visible; transform: scale(1) translateY(0); }	
+}
+
+@keyframes boxOut {
+	0% { opacity: 1; visibility: visible; transform: scale(1) translateY(0); }	
+	100% { opacity: 0; visibility: hidden; transform: scale(0.95) translateY(-12px); }	
+}
+
+@keyframes overlayIn {
+	0% { opacity: 0; visibility: hidden; }	
+	100% { opacity: 1; visibility: visible; }	
+}
+
+@keyframes overlayOut {
+	0% { opacity: 1; visibility: visible; }	
+	100% { opacity: 0; visibility: hidden; }	
+}
+
