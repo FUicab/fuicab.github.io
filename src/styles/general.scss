@@ -155,7 +155,14 @@ h4{
     font-size: 20px;
     font-family: 'Kanit Bold';
     margin: 0 0 8px;
+	
+	&.subtitle{
+		font-size: 16px;
+		color: var(--subtitle-color);
+		text-align: center;
+	}
 }
+
 
 hr{
     border-style: none;

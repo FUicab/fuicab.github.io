@@ -1,0 +1,23 @@
+$tileSize: 24px;
+
+.dungeonator{
+    .dungeon-row{
+        display: flex;
+
+        .tile{
+            margin: 1px;
+            height: $tileSize;
+            width: $tileSize;
+            border-radius: 2px;
+            border: 1px solid #ddd;
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+            
+            &.room{
+                border-color: #333;
+                background-color: #ccc;
+            }
+        }
+    }
+}
