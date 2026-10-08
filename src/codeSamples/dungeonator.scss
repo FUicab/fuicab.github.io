@@ -10,13 +10,25 @@ $tileSize: 24px;
             width: $tileSize;
             border-radius: 2px;
             border: 1px solid #ddd;
-            font-size: 12px;
+            font-size: 8px;
             color: #999;
             text-align: center;
             
             &.room{
                 border-color: #333;
                 background-color: #ccc;
+                color: #111;
+
+            }
+            &.failed-placing:not(.empty){
+                border-color: #644;
+                background-color: #fdd;
+                color: #422;
+            }
+            &.corridor{
+                border-color: #553;
+                background-color: #eec;
+                color: #221;
             }
         }
     }
